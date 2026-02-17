@@ -1,40 +1,31 @@
-/* ===== BOTÕES PREMIUM DO HERO ===== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
-.hero-btn {
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.hero-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-}
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+  }
 
-/* brilho passando */
-.hero-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.6),
-    transparent
-  );
-  transform: skewX(-20deg);
-}
-
-.hero-btn:hover::before {
-  animation: heroShine 0.8s forwards;
-}
-
-@keyframes heroShine {
-  100% {
-    left: 120%;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
   }
 }
+
+@layer utilities {
+
+  /* ===== ANIMAÇÕES ===== */
+
+  @keyframes float {
+    0%,100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+  }
+
+  @keyframes gentle-sway {
+    0%,100% { transform: translateX(0px) rotate(0deg); }
+    25% { transform: translateX(2px) rotate(0.5deg); }
+    75% { transform: translate
 
