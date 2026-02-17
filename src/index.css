@@ -10,14 +10,12 @@
     scroll-behavior: smooth;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,h2,h3,h4,h5,h6 {
     font-family: 'Playfair Display', serif;
   }
 }
 
 @layer utilities {
-
-  /* ===== ANIMAÇÕES ===== */
 
   @keyframes float {
     0%,100% { transform: translateY(0px); }
@@ -30,59 +28,13 @@
     75% { transform: translateX(-2px) rotate(-0.5deg); }
   }
 
-  @keyframes text-reveal {
-    from {
-      opacity: 0;
-      clip-path: inset(0 100% 0 0);
-    }
-    to {
-      opacity: 1;
-      clip-path: inset(0 0 0 0);
-    }
+  .animate-float {
+    animation: float 7s ease-in-out infinite;
   }
 
-  .animate-float { animation: float 7s ease-in-out infinite; }
-  .animate-gentle-sway { animation: gentle-sway 5s ease-in-out infinite; }
-  .animate-text-reveal { animation: text-reveal 1.2s ease-out; }
-
-  /* ===== BOTÕES HERO ===== */
-
-  .hero-btn {
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
+  .animate-gentle-sway {
+    animation: gentle-sway 5s ease-in-out infinite;
   }
-
-  .hero-btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  }
-
-  .hero-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -120%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(
-      120deg,
-      transparent,
-      rgba(255,255,255,0.6),
-      transparent
-    );
-    transform: skewX(-20deg);
-  }
-
-  .hero-btn:hover::before {
-    animation: heroShine 0.8s forwards;
-  }
-
-  @keyframes heroShine {
-    100% { left: 120%; }
-  }
-
-  /* ===== BACKGROUND ===== */
 
   .bg-pattern {
     position: relative;
@@ -91,3 +43,14 @@
   .bg-pattern::before {
     content: '';
     position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(198,167,94,0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(198,167,94,0.02) 0%, transparent 50%);
+    pointer-events: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
