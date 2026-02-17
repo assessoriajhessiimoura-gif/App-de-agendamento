@@ -22,6 +22,8 @@ export default function Hero() {
     >
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
+
+          {/* TEXTO */}
           <div
             className={`space-y-6 transition-all duration-1200 ${
               isVisible
@@ -45,21 +47,22 @@ export default function Hero() {
               exclusividade.
             </p>
 
+            {/* BOTÕES */}
             <div className="flex gap-4 pt-4">
               {/* BOTÃO PROCEDIMENTOS */}
               <button
                 onClick={() => scrollToSection('procedimentos')}
-                className="bg-[#2E7D32] text-white px-8 py-4 rounded-lg hover:bg-[#1B5E20] transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+                className="hero-btn bg-[#2E7D32] text-white px-8 py-4 rounded-lg"
               >
                 Ver Procedimentos
               </button>
 
               {/* BOTÃO INSTAGRAM */}
               <a
-                href="https://www.instagram.com/bianca.cilioss?igsh=MW0yeWJ2Yjh5b2g4bw=="
+                href="https://instagram.com/bianca.cilioss"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 border-2 border-[#C6A75E] text-[#3A2E2A] px-8 py-4 rounded-lg hover:bg-[#C6A75E] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+                className="hero-btn flex items-center gap-2 border-2 border-[#C6A75E] text-[#3A2E2A] px-8 py-4 rounded-lg"
               >
                 <Instagram size={20} />
                 Instagram
@@ -67,6 +70,7 @@ export default function Hero() {
             </div>
           </div>
 
+          {/* IMAGEM */}
           <div
             className={`relative transition-all duration-1000 delay-300 ${
               isVisible
@@ -85,6 +89,7 @@ export default function Hero() {
               <div className="absolute -top-6 -left-6 w-40 h-40 bg-[#C6A75E] opacity-15 rounded-full blur-3xl"></div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
