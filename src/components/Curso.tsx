@@ -7,7 +7,7 @@ export default function Curso() {
         <div className="grid md:grid-cols-[1fr_1.2fr] gap-16 items-center">
           <div className="relative animate-parallax order-2 md:order-1 group">
             <img
-              src="/images/WhatsApp_Image_2026-02-16_at_12.53.19.jpeg"
+              src="/images/WhatsApp Image 2026-02-16 at 12.53.19 (1).jpeg"
               alt="Bianca Moura"
               className="rounded-2xl shadow-2xl w-full group-hover:shadow-xl transition-all duration-500 group-hover:scale-105"
             />
