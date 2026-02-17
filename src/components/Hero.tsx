@@ -66,7 +66,7 @@ export default function Hero() {
           >
             <div className="relative animate-float">
               <img
-                src="/images/WhatsApp_Image_2026-02-16_at_12.53.19.jpeg"
+                src="/images/WhatsApp Image 2026-02-16 at 12.53.19 (1).jpeg"
                 alt="Bianca Moura Lash Designer"
                 className="rounded-2xl shadow-2xl w-full max-w-lg mx-auto"
               />
