@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Instagram } from 'lucide-react'
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -43,29 +42,28 @@ export default function Hero() {
 
             <p className="text-lg text-[#3A2E2A] leading-relaxed max-w-md font-light">
               Experiência sofisticada em extensão de cílios, onde técnica e arte
-              se encontram para realçar sua beleza natural com elegância e
-              exclusividade.
+              se encontram para realçar sua beleza natural com elegância e exclusividade.
             </p>
 
             {/* BOTÕES */}
             <div className="flex gap-4 pt-4">
-              {/* BOTÃO PROCEDIMENTOS */}
+
+              {/* VER PROCEDIMENTOS */}
               <button
                 onClick={() => scrollToSection('procedimentos')}
-                className="hero-btn bg-[#2E7D32] text-white px-8 py-4 rounded-lg"
+                className="bg-[#2E7D32] text-white px-8 py-4 rounded-lg hover:bg-[#1B5E20] transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
               >
                 Ver Procedimentos
               </button>
 
-              {/* BOTÃO INSTAGRAM */}
+              {/* INSTAGRAM */}
               <a
-                href="https://instagram.com/bianca.cilioss"
+                href="https://www.instagram.com/bianca.cilioss"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hero-btn flex items-center gap-2 border-2 border-[#C6A75E] text-[#3A2E2A] px-8 py-4 rounded-lg"
+                className="px-8 py-4 rounded-lg border-2 border-[#C6A75E] text-[#3A2E2A] hover:bg-[#C6A75E] hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
               >
-                <Instagram size={20} />
-                Instagram
+                📷 Instagram
               </a>
             </div>
           </div>
@@ -84,9 +82,6 @@ export default function Hero() {
                 alt="Bianca Moura Lash Designer"
                 className="rounded-2xl shadow-2xl w-full max-w-lg mx-auto"
               />
-
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#C6A75E] opacity-25 rounded-full blur-3xl"></div>
-              <div className="absolute -top-6 -left-6 w-40 h-40 bg-[#C6A75E] opacity-15 rounded-full blur-3xl"></div>
             </div>
           </div>
 
